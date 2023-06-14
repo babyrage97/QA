@@ -4,7 +4,7 @@ require 'rspec'
 # Test for registration at polovni automoboili
 describe 'Polovni automobili application:' do
   describe 'signup to the polovni automobili application' do
-    it 'confirm that a user can successfully signup' do
+    it 'Confirm user use short password' do
       timestemp = Time.now.to_i
       driver = Selenium::WebDriver.for :firefox
       # Go to sing-in form
@@ -36,7 +36,7 @@ describe 'Polovni automobili application:' do
 
       sleep 2
 
-      # Confirm user is singed up successufly
+      # Confirm user use short password
       shortpw_box = driver.find_element(xpath: "/html/body/div[1]/div/div/div/div/div/div/div[1]/form/div[3]/div[1]")
       shortpw_boxtext = shortpw_box.text
       expect(shortpw_boxtext).to eq("Šifra je kraća od 8 znakova")

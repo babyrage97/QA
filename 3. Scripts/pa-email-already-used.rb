@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 require 'rspec'
 
-# Test fir registration at polovni automoboili
+# Test for registration at polovni automoboili
 describe 'Polovni automobili application:' do
   describe 'signup to the polovni automobili application' do
     it 'Confirm user already used this email address' do
