@@ -1,0 +1,12 @@
+.To establish an automatic testing system for the registration form on the Polovni Automobili website
+
+Selenium WebDriver: This open-source tool is ideal for automating the testing of web applications. Selenium WebDriver has the capability to simulate user interactions with the registration form, including filling out form fields and submitting the form. It supports multiple programming languages such as Java, allowing developers to write tests in their preferred language.
+
+Cucumber: Cucumber is a framework that follows the principles of Behavior-Driven Development (BDD). It facilitates the creation of test scenarios in a human-readable format. These scenarios can be composed using the Gherkin syntax, which is designed to be easily understood by both technical and non-technical stakeholders. By providing a common language for defining tests, Cucumber promotes collaboration between team members with different backgrounds and expertise.
+By combining Selenium WebDriver and Cucumber, the automatic testing system can achieve the following benefits:
+
+Reproducible Tests: Selenium WebDriver can interact with the registration form consistently, ensuring that tests produce the same results across different runs. This allows for reliable and repeatable testing.
+Efficient Test Execution: With automation, tests can be executed rapidly and repeatedly, saving time and effort compared to manual testing. This is particularly advantageous when performing regression testing or running tests on multiple browsers and devices.
+Enhanced Test Coverage: By automating the testing process, a wider range of scenarios can be covered, including edge cases and negative test scenarios. This helps in identifying potential issues and ensuring the robustness of the registration form.
+Clear Test Reporting: Cucumber provides detailed and readable reports that summarize the test results. This facilitates easy identification of failures, enabling quick bug resolution and providing comprehensive documentation of the testing process.
+In conclusion, the combination of Selenium WebDriver and Cucumber offers a powerful and effective solution for implementing an automatic testing system for the registration form on the Prodaja Automobilca website. These tools enable efficient testing, improved collaboration, and thorough coverage of test scenarios, leading to a more reliable and stable registration process.
