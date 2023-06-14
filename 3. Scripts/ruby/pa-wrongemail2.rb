@@ -3,17 +3,15 @@ require 'rspec'
 require_relative "singup_page.rb"
 require_relative "user_page.rb"
 
-timestemp = Time.now.to_i
-email = "test#{timestemp}@test.me"
-password = 'Testic'
-password2 = 'Testic'
-shortpw_text = "Šifra je kraća od 8 znakova"
+email = "testtest.me"
+password = 'Testic123'
+password2 = 'Testic123'
+wrong_emailtext = "Email adresa koju ste uneli nije ispravna"
 
-
-# Test for registration at polovni automoboili
+# Test fir registration at polovni automoboili
 describe 'Polovni automobili application:' do
   describe 'signup to the polovni automobili application' do
-    it 'confirm that a user can successfully signup' do
+    it 'Confirm user used wrong email address' do
       @driver = Selenium::WebDriver.for :firefox
       # Go to sing-in form
       @driver.navigate.to 'https://www.polovniautomobili.com/registracija'
@@ -28,14 +26,13 @@ describe 'Polovni automobili application:' do
       signup.click_easybuy
       signup.click_login
 
+      sleep 1
 
-      sleep 2
-
-      # Confirm user is singed up successufly
+      # Confirm user used wrong email address
       user = UserPage.new(@driver)
-      shortpw_box = user.user_shortpw
-      expect(shortpw_box).to eq(shortpw_text)
-      
+      already_used_email = user.user_already_used_email
+      expect(already_used_email).to eq(wrong_emailtext)
+
       @driver.quit
 
     end
